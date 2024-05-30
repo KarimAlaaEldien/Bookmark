@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="icon" href="./images/bookmark.webp">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="py-5">
+        <section class="home">
+            <div class="container ">
+                <h1 class="position-relative py-2 z-1 mx-auto mb-1 text-center">Bookmarker</h1>
+                <div class=" dot mt-5 px-3 py-4">
+                    <h2 class="mx-auto text-center mb-4">
+                        <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites
+                        <i class="fa-solid fa-bookmark"></i>
+                    </h2>
+
+                    <div class="mb-4">
+                        <label for="siteName" class="form-label pb-2 mb-0 fw-semibold"><i
+                                class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+                        <input type="text" class="form-control" id="siteName" placeholder="Bookmark Name">
+                    </div>
+                    <div class="mb-4">
+                        <label for="siteURL" class="form-label pb-2 mb-0 fw-semibold"><i
+                                class="fa-solid fa-link pe-2"></i> Site URL</label>
+                        <input type="text" class="form-control" id="siteURL" placeholder="Website URL">
+                    </div>
+                    <div class="text-center">
+                        <button id="submitBtn" class="btn btn-warning mx-auto">Submite</button>
+                        <button id="shiftButton" class="btn btn-secondary d-none mx-auto">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="series">
+            <div class="container">
+                <input type="search" oninput="getSearchInput()" class="form-control mt-3" id="search"
+                    placeholder="Search for the site by name : ">
+
+                <table class="table mt-4 text-center bg-light">
+                    <thead>
+                        <th>index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                    </thead>
+
+                    <tbody id="displaySeries">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
